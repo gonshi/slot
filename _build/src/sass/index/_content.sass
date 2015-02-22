@@ -1,0 +1,49 @@
+.wrapper
+  .content_container
+    text-align: center
+    letter-spacing: -4px
+
+  .content
+    display: inline-block
+    position: relative
+    padding: 0 20px
+    letter-spacing: 0px
+
+    &:before
+      $bg: "ptn.png"
+      position: absolute
+      +trbl(0, 0, 0, 0)
+      +bg($bg, auto, repeat)
+      opacity: 0
+      +transition(opacity 0.5s ease 0s)
+      pointer-events: none
+      content: ""
+
+    &:after
+      $shadowColor: #fff
+      position: absolute
+      +trbl(0, 0, 0, 0)
+      height: 4.5em
+      margin: auto
+      color: #333 
+      font-size: 28px
+      font-weight: bold
+      text-align: center
+      white-space: pre
+      text-shadow: 2px 0px 0px $shadowColor, -1.74661px -0.97435px 0px $shadowColor, 1.05064px 1.70181px 0px $shadowColor, -0.08846px -1.99804px 0px $shadowColor, -0.89615px 1.78799px 0px $shadowColor, 1.65367px -1.12488px 0px $shadowColor, -1.99218px 0.17674px 0px $shadowColor, 1.82588px 0.81619px 0px $shadowColor, -1.19692px -1.60231px 0px $shadowColor, 0.26467px 1.98241px 0px $shadowColor, 0.73464px -1.86019px 0px $shadowColor, -1.5478px 1.26662px 0px $shadowColor, 1.96876px -0.35209px 0px $shadowColor, -1.89086px -0.65165px 0px $shadowColor, 1.33383px 1.49027px 0px $shadowColor, -0.43882px -1.95127px 0px $shadowColor, -0.56738px 1.91783px 0px $shadowColor
+      pointer-events: none
+      opacity: 0
+
+    &.tameslo:after
+      content: "ためになるスロット\A\A〜スロット × アルファベット〜"
+
+    &.threecodes:after
+      content: "THREE CODES\A\A〜スロット × コード進行〜"
+
+    &.rgbtour:after
+      content: "RGB TOUR\A\A〜スロット × 配色〜"
+
+    &:hover
+      &:before,
+      &:after
+        opacity: 1

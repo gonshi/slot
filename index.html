@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image:src" content="">
+    <link rel="stylesheet" href="css/main.css" media="screen, print">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <!-- script(type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411")--><!--[if lte IE 9]>
+    <script src="js/html5shiv.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="ttl"><img src="img/ttl.png" alt="スロット × ◯◯"></h1>
+      <div class="txt_container">
+        <p class="copy">
+          あなたはスロットをやったことがありますか？<br>
+          僕はないです。あ、いや、あります。<br>
+          昔、ゲームセンターのメダルゲームでよくやっていました。<br>
+          大人になると、スロットといえばギャンブルの世界のものになってしまい<br>
+          なかなかやらなくなってしまいましたが、<br>
+          何かを３つ揃えるだけで面白いことが起きるあの仕組みは、<br>
+          使い方次第でもっと面白くなるはず。<br>
+          今回は、スロット × ◯◯というテーマで３種類のゲームを作りました。<br>
+          少しの間でも楽しんでもらえるとうれしいです。
+        </p>
+        <p class="caution sp">※ PCからの閲覧がオススメです。</p>
+      </div>
+      <div class="content_container">
+        <div class="content tameslo"><a href="http://tameslo.gonshi.net" target="_blank"><img src="img/tameslo.jpg" alt="ためになるスロット"></a></div>
+        <div class="content threecodes"><a href="http://gonshi.github.io/three-codes" target="_blank"><img src="img/threecodes.jpg" alt="THREE CODES"></a></div>
+        <div class="content rgbtour"><a href="http://gonshi.github.io/rgb-tour/" target="_blank"><img src="img/rgbtour.jpg" alt="RGB TOUR"></a></div>
+      </div>
+    </div>
+    <script>
+      var ua = window.navigator.userAgent;
+      if ( ( /ipod|iphone|ipad|android/i ).test( ua ) ){
+        var i;
+        var pc_contents = document.querySelectorAll( ".pc" );
+        var pc_contentsLength = pc_contents.length;
+        var sp_contents = document.querySelectorAll( ".sp" );
+        var sp_contentsLength = sp_contents.length;
+        window.isSp = true;
+        
+        for ( i = 0; i < pc_contentsLength; i++ ){
+          pc_contents[ i ].style.display = "none";
+        }
+        for ( i = 0; i < sp_contentsLength; i++ ){
+          sp_contents[ i ].style.display = "block";
+        }
+        
+        if ( ( /ipad|iphone|ipad/i ).test( ua ) ){
+          // set meta viewport
+          document.querySelector( 'meta[name="viewport"]' ).setAttribute(
+            "content", "width=640, minimum-scale=0.25, maximum-scale=1.6, user-scalable=no"
+          );
+        }
+      }
+      else{
+        window.isSp = false;
+      }
+    </script>
+    <!--[if (!IE)|(gt IE 8)]>
+    <!-->
+    <script src="js/jquery-2.1.3.min.js"></script><!--<![endif]--><!--[if lte IE 8]>
+    <script src="js/jquery-1.11.2.min.js"></script><![endif]-->
+    <script src="js/app.min.js"></script>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=1548831858693621&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+      window.twttr = (function (d,s,id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+          js=d.createElement(s);
+          js.id=id;
+          js.src="https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+          return window.twttr || (t = {
+            _e: [],
+            ready: function(f){
+              t._e.push(f)
+            }
+          });
+      }(document, "script", "twitter-wjs"));
+    </script>
+  </body>
+</html>
